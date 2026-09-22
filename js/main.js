@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <i class="fas fa-check-circle"></i>
                   <h4>Requirement Sent Successfully!</h4>
                 </div>
-                <p>Thank you, <strong>${nameVal}</strong>! Your requirement has been emailed directly to <strong>chemicalshop67@gmail.com</strong>. Our sales team will contact you at <strong>${phoneVal}</strong> shortly.</p>
+                <p>Thank you, <strong>${nameVal}</strong>! Your requirement has been received. Our sales team will contact you at <strong>${phoneVal}</strong> shortly.</p>
               `;
             }
             contactForm.reset();
