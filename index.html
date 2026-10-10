@@ -37,6 +37,7 @@
         <a href="#home" class="nav-item">Home</a>
         <a href="#about" class="nav-item">About Us</a>
         <a href="#products" class="nav-item">Products</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
         <a href="#why-us" class="nav-item">Why Choose Us</a>
         <a href="#contact" class="nav-item">Contact</a>
         <a href="#contact" class="btn btn-primary mobile-nav-btn nav-item">Get a Quote</a>
@@ -81,36 +82,34 @@
   <section id="about" class="section">
     <div class="container">
       <div class="section-title">
-        <h2>About United SSD Chem</h2>
-        <p>Dedicated to delivering pure, reliable, and certified chemical products.</p>
+        <h2>Reliable Chemical Solutions &amp; Specialized Surface Treatment Services</h2>
+        <p>
+          We provide high-performance chemical solutions designed to effectively remove surface impurities and deliver reliable cleaning results. Our team of skilled and experienced technicians is committed to providing professional service and technical expertise tailored to your needs.
+        </p>
       </div>
 
       <div class="about-content">
         <div class="about-card">
-          <div class="about-icon"><i class="fas fa-flask"></i></div>
-          <h3>Who We Are</h3>
+          <div class="about-icon"><i class="fas fa-file-shield"></i></div>
+          <h3>Specialized Paper &amp; Card Treatment Services</h3>
           <p>
-            United SSD Chem is a specialized chemical company providing formulated chemical solutions, activation
-            powders, and industrial-grade solvents. We serve businesses, laboratories, and commercial clients across the
-            globe.
+            We offer specialized treatment solutions for a wide range of high-security paper and card substrates. Using advanced treatment methods, we help restore paper-based materials to a clean, refined finish while maintaining appropriate care for the substrate.
           </p>
         </div>
 
         <div class="about-card">
-          <div class="about-icon"><i class="fas fa-check-double"></i></div>
-          <h3>Quality Assurance</h3>
+          <div class="about-icon"><i class="fas fa-industry"></i></div>
+          <h3>Industrial Chemical Products &amp; Global Distribution</h3>
           <p>
-            All our products undergo thorough laboratory verification to guarantee optimal concentration, stability, and
-            high purity standards. We prioritize consistent performance in every single batch.
+            We supply high-quality chemical solutions developed for commercial and industrial surface preparation applications. With a commitment to product quality and dependable worldwide distribution, we serve customers across international markets.
           </p>
         </div>
 
         <div class="about-card">
-          <div class="about-icon"><i class="fas fa-globe-americas"></i></div>
-          <h3>Worldwide Supply</h3>
+          <div class="about-icon"><i class="fas fa-gears"></i></div>
+          <h3>Technical Support &amp; Processing Solutions</h3>
           <p>
-            With reliable packaging and international shipping capabilities, we safely deliver orders worldwide with
-            fast turnaround times and dedicated customer assistance.
+            Our qualified technical team provides specialized support for projects worldwide. We offer both manual and automated processing solutions, delivering professional expertise and application support to meet diverse industrial requirements.
           </p>
         </div>
       </div>
@@ -223,6 +222,47 @@
     </div>
   </section>
 
+  <!-- Photo Gallery Section -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Photo Gallery</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-card" data-index="0" data-src="assets/images/gallery/gallery-1.png">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/gallery-1.png" alt="Chemical Laboratory" class="img-cover" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="gallery-card" data-index="1" data-src="assets/images/gallery/gallery-2.png">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/gallery-2.png" alt="Universal SSD Solution" class="img-contain" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="gallery-card" data-index="2" data-src="assets/images/gallery/gallery-3.png">
+          <div class="gallery-img-wrapper">
+            <img src="assets/images/gallery/gallery-3.png" alt="Aluminum Packaging" class="img-contain" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-zoom-btn"><i class="fas fa-search-plus"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Why Choose Us -->
   <section id="why-us" class="section">
     <div class="container">
@@ -307,7 +347,8 @@
           <div class="info-box">
             <i class="fas fa-envelope"></i>
             <div>
-
+              <h4>Email Support</h4>
+              <p><a href="mailto:chemicalshop67@gmail.com">chemicalshop67@gmail.com</a></p>
             </div>
           </div>
 
@@ -316,6 +357,17 @@
             <div>
               <h4>Phone Support</h4>
               <p><a href="tel:918265845040">+918265845040</a></p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <i class="fab fa-telegram" style="color: #229ED9;"></i>
+            <div>
+              <h4>Chat on Telegram</h4>
+              <p><a href="https://t.me/+918265845040" target="_blank" rel="noopener noreferrer" style="color: #229ED9; font-weight: 700;">+918265845040</a></p>
+              <a href="https://t.me/+918265845040" target="_blank" rel="noopener noreferrer" class="btn-telegram-link">
+                <i class="fab fa-telegram-plane"></i> Chat on Telegram
+              </a>
             </div>
           </div>
 
@@ -355,6 +407,7 @@
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
         <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
         <a href="#why-us">Why Choose Us</a>
         <a href="#contact">Contact</a>
       </div>
@@ -366,6 +419,42 @@
       </div>
     </div>
   </footer>
+
+  <!-- Photo Gallery Lightbox Modal -->
+  <div id="galleryLightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Photo Gallery Modal">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next photo">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightboxImg" src="" alt="Gallery Preview" />
+      </div>
+      <div class="lightbox-caption">
+        <span class="lightbox-counter" id="lightboxCounter">1 / 3</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Chat Buttons -->
+  <!-- Telegram Floating Button -->
+  <a id="telegramFloatBtn"
+    href="https://t.me/+918265845040"
+    target="_blank" rel="noopener noreferrer" aria-label="Chat with us on Telegram" class="telegram-float">
+    <span class="telegram-tooltip">Chat on Telegram (+918265845040)</span>
+    <span class="telegram-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+      </svg>
+    </span>
+    <span class="telegram-pulse"></span>
+  </a>
 
   <!-- WhatsApp Floating Button -->
   <a id="whatsappFloatBtn"

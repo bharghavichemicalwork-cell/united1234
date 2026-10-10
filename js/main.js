@@ -225,11 +225,96 @@ ${nameVal}`;
             <a href="${whatsappUrl}" target="_blank" class="status-btn btn btn-whatsapp">
               <i class="fab fa-whatsapp"></i> Send via WhatsApp
             </a>
+            <a href="https://t.me/+918265845040" target="_blank" class="status-btn btn btn-telegram">
+              <i class="fab fa-telegram-plane"></i> Chat on Telegram
+            </a>
           </div>
         `;
       }
 
       contactForm.reset();
+    });
+  }
+
+  // 4. Photo Gallery Lightbox Functionality
+  const galleryCards = document.querySelectorAll('.gallery-card');
+  const lightboxModal = document.getElementById('galleryLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  const lightboxOverlay = document.getElementById('lightboxOverlay');
+
+  if (lightboxModal && galleryCards.length > 0) {
+    let currentIndex = 0;
+    const galleryItems = Array.from(galleryCards).map((card) => ({
+      src: card.getAttribute('data-src') || '',
+      title: card.getAttribute('data-title') || '',
+      desc: card.getAttribute('data-desc') || ''
+    }));
+
+    function showLightbox(index) {
+      if (index < 0) index = galleryItems.length - 1;
+      if (index >= galleryItems.length) index = 0;
+      currentIndex = index;
+
+      const item = galleryItems[currentIndex];
+      if (lightboxImg) {
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.title || 'Photo preview';
+      }
+      if (lightboxTitle) lightboxTitle.innerHTML = item.title;
+      if (lightboxDesc) lightboxDesc.textContent = item.desc;
+      if (lightboxCounter) lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+
+      lightboxModal.classList.add('active');
+      lightboxModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+    }
+
+    function hideLightbox() {
+      lightboxModal.classList.remove('active');
+      lightboxModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+    }
+
+    galleryCards.forEach((card, idx) => {
+      card.addEventListener('click', () => {
+        showLightbox(idx);
+      });
+    });
+
+    if (lightboxClose) lightboxClose.addEventListener('click', hideLightbox);
+    if (lightboxOverlay) lightboxOverlay.addEventListener('click', hideLightbox);
+
+    if (lightboxPrev) {
+      lightboxPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showLightbox(currentIndex - 1);
+      });
+    }
+
+    if (lightboxNext) {
+      lightboxNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showLightbox(currentIndex + 1);
+      });
+    }
+
+    // Keyboard controls (Left/Right arrow, Escape)
+    window.addEventListener('keydown', (e) => {
+      if (!lightboxModal.classList.contains('active')) return;
+
+      if (e.key === 'Escape') {
+        hideLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        showLightbox(currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        showLightbox(currentIndex + 1);
+      }
     });
   }
 });
