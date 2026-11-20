@@ -200,7 +200,7 @@ ${nameVal}`;
       const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
       const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
       const whatsappText = `Hello United SSD Chem, my name is ${nameVal} (Phone: ${phoneVal}). My chemical requirement: ${requirementVal}`;
-      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(whatsappText)}`;
+      const whatsappUrl = `https://wa.me/918218544092?text=${encodeURIComponent(whatsappText)}`;
 
       // Trigger the default mail client
       window.location.href = mailtoUrl;
@@ -224,9 +224,6 @@ ${nameVal}`;
             </a>
             <a href="${whatsappUrl}" target="_blank" class="status-btn btn btn-whatsapp">
               <i class="fab fa-whatsapp"></i> Send via WhatsApp
-            </a>
-            <a href="https://t.me/+918265845040" target="_blank" class="status-btn btn btn-telegram">
-              <i class="fab fa-telegram-plane"></i> Chat on Telegram
             </a>
           </div>
         `;
